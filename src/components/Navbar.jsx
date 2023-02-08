@@ -17,7 +17,7 @@ const NavContainer = styled(motion.div)`
 
   
   @media (max-width: 40em) {
-    top: ${(props) => (props.click ? '0' : `calc(-50vh - 4rem)`)};
+    top: ${(props) => (props.click ? '0' : `calc(-25vh - 2rem)`)};
 
   }
 `;
@@ -72,7 +72,7 @@ const MenuItems = styled(motion.ul)`
   @media (max-width: 40em) {
     flex-direction:column;
     padding:2rem 0;
-    height: 50vh;
+    height: 30vh;
   }
 `;
 

@@ -31,6 +31,7 @@ const Left = styled.div`
   position: relative;
   z-index: 5;
   margin-top: 20%;
+  color: #030303;
 
   @media (max-width: 64em) {
     width: 80%;
@@ -44,17 +45,19 @@ const Left = styled.div`
     padding: 2rem;
     font-weight: 600;
 
-    backdrop-filter: blur(2px);
-    background-color: ${(props) => `rgba(${props.theme.textRgba},0.4)`};
+    backdrop-filter: blur(1px);
     border-radius: 20px;
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontmd};
+    background-color: #ffffff90;
+    color: #030303;
   }
   @media (max-width: 30em) {
     font-size: ${(props) => props.theme.fontsm};
     padding: 2rem;
-    width: 70%;
+    width: 90%;
+
   }
 `;
 
@@ -71,8 +74,8 @@ const Right = styled.div`
   .small-img-1 {
     width: 40%;
     position: absolute;
-    right: 95%;
-    bottom: 10%;
+    right: 90%;
+    bottom: 20%;
   }
   .small-img-2 {
     width: 40%;
@@ -93,10 +96,17 @@ const Right = styled.div`
     }
 
     .small-img-1 {
-      display: none;
+      width: 30%;
+      height: auto;
+      left: 10%;
+      bottom: 10%;
     }
     .small-img-2 {
-      display: none;
+      width: 25%;
+      height: auto;
+      position: absolute;
+      left: 70%;
+      bottom: 20%;
     }
   }
 `;
@@ -123,6 +133,7 @@ const Title = styled.h1`
   }
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxxxl};
+    margin-top: 2rem;
   }
 `;
 
@@ -137,11 +148,11 @@ const About = () => {
         Sobre mí
       </Title>
       <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
-        Hola, mi nombre es Iván Ferez. <br />
+        Mi nombre es Iván Ferez. <br />
         Tengo 28 años y vivo en Argentina, Buenos Aires.
-        <br /> Estudio en la Universidad Nacional de La Matanza, la Tecnicatura
+        <br /> Estudio en la Universidad Nacional de La Matanza, una Tecnicatura
         en Desarrollo Web. <br /> Me encuentro brindando servicio para el
-        Ministerio de Economía. Desarrollo interfaces que permitan al
+        Ministerio de Economía, como Front end Developer. Desarrollo interfaces que permitan al
         usuario interactuar con productos digitales de una manera sencilla.
       </Left>
 
@@ -151,7 +162,7 @@ const About = () => {
           width="400"
           height="600"
           className="small-img-1"
-          src={img2}
+          src={img3}
           alt="Gamer"
           data-scroll
           data-scroll-speed="3"
@@ -160,7 +171,7 @@ const About = () => {
           width="400"
           height="600"
           className="small-img-2"
-          src={img3}
+          src={img2}
           alt="Perfil"
           data-scroll
           data-scroll-speed="-2"
