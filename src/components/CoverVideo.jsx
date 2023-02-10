@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-import MainVideo from "../assets/aurora.mp4";
+import MainVideo from "../assets/ushuaiavideo.mp4";
 
 const VideoContainer = styled.section`
   width: 100%;
@@ -105,18 +105,26 @@ const CoverVideo = () => {
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.18"
+            data-scroll-delay="0.19"
             data-scroll-speed="4"
           >
-            i
+            U
           </motion.h1>
           <motion.h1
             variants={item}
             data-scroll
-            data-scroll-delay="0.15"
+            data-scroll-delay="0.17"
             data-scroll-speed="4"
           >
-            F
+            s
+          </motion.h1>
+          <motion.h1
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.14"
+            data-scroll-speed="4"
+          >
+            h
           </motion.h1>
           <motion.h1
             variants={item}
@@ -124,7 +132,7 @@ const CoverVideo = () => {
             data-scroll-delay="0.11"
             data-scroll-speed="4"
           >
-            e
+            u
           </motion.h1>
           <motion.h1
             variants={item}
@@ -132,7 +140,7 @@ const CoverVideo = () => {
             data-scroll-delay="0.08"
             data-scroll-speed="4"
           >
-            r
+            a
           </motion.h1>
           <motion.h1
             variants={item}
@@ -140,7 +148,7 @@ const CoverVideo = () => {
             data-scroll-delay="0.06"
             data-scroll-speed="4"
           >
-            e
+            i
           </motion.h1>
           <motion.h1
             variants={item}
@@ -148,7 +156,7 @@ const CoverVideo = () => {
             data-scroll-delay="0.04"
             data-scroll-speed="4"
           >
-            z
+            a
           </motion.h1>
         </div>
         <motion.h2
@@ -158,7 +166,7 @@ const CoverVideo = () => {
           data-scroll-delay="0.04"
           data-scroll-speed="2"
         >
-          Web Developer
+          Fin del mundo
         </motion.h2>
       </Title>
 
