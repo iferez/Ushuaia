@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import img1 from "../assets/Images/lago.jpg";
-import img2 from "../assets/Images/gamerdos.jpg";
-import img3 from "../assets/Images/ivan.png";
+import faro from "../assets/Images/faro.jpg";
+import ciudad from "../assets/Images/ciudad.jpg";
+import tren from "../assets/Images/tren.jpg";
+
 
 const Section = styled.section`
   min-height: 100vh;
@@ -57,7 +58,6 @@ const Left = styled.div`
     font-size: ${(props) => props.theme.fontsm};
     padding: 2rem;
     width: 90%;
-
   }
 `;
 
@@ -72,16 +72,22 @@ const Right = styled.div`
   }
 
   .small-img-1 {
-    width: 40%;
+    width: 80%;
     position: absolute;
-    right: 90%;
+    right: 92%;
     bottom: 20%;
   }
   .small-img-2 {
-    width: 40%;
+    width: 50%;
     position: absolute;
-    left: 80%;
+    left: 70%;
     top: 30%;
+  }
+
+  @media (max-width: 90em) {
+    .small-img-1 {
+      bottom: 12%;
+    }
   }
 
   @media (max-width: 64em) {
@@ -145,25 +151,25 @@ const About = () => {
         data-scroll-speed="-2"
         data-scroll-direction="horizontal"
       >
-        Sobre mí
+        Ciudad
       </Title>
-      <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
-        Mi nombre es Iván Ferez. <br />
-        Tengo 28 años y vivo en Argentina, Buenos Aires.
-        <br /> Estudio en la Universidad Nacional de La Matanza, una Tecnicatura
-        en Desarrollo Web. <br /> Me encuentro brindando servicio para el
-        Ministerio de Economía, como Front end Developer. Desarrollo interfaces que permitan al
-        usuario interactuar con productos digitales de una manera sencilla.
+      <Left data-scroll data-scroll-speed="2">
+        Ushuaia se encuentra al final de la Patagonia austral, es el extremo sur
+        de la Argentina, el fin del mundo o como la llaman algunos:
+        <strong> el principio de todo</strong>. Está rodeada por el mar y por la
+        cordillera; desde donde te pares podés llegar a ver alguno de los dos y
+        sorprenderte con los colores y la inmensidad de la naturaleza presente
+        en la ciudad.
       </Left>
 
       <Right>
-        <img width="400" height="600" src={img1} alt="Paisaje" />
+        <img width="400" height="600" src={faro} alt="Faro del fin del mundo" />
         <img
           width="400"
           height="600"
           className="small-img-1"
-          src={img3}
-          alt="Gamer"
+          src={ciudad}
+          alt="Ciudad de Ushuaia"
           data-scroll
           data-scroll-speed="3"
         />
@@ -171,8 +177,8 @@ const About = () => {
           width="400"
           height="600"
           className="small-img-2"
-          src={img2}
-          alt="Perfil"
+          src={tren}
+          alt="Tren del fin del mundo"
           data-scroll
           data-scroll-speed="-2"
         />

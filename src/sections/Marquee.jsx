@@ -32,7 +32,7 @@ const Container = styled.div`
 `;
 
 const Banner = styled.h1`
-  font-size: ${(props) => props.theme.fontxxxl};
+  font-size: ${(props) => props.theme.fontBig};
   font-family: "Kaushan Script";
   color: ${(props) => props.theme.text};
   /* position: absolute; */
@@ -44,7 +44,13 @@ const Banner = styled.h1`
     display: block;
     background-color: ${(props) => props.theme.body};
     padding: 1rem 6rem;
+    box-shadow: 1px 1px 1px #ffff;
   }
+
+  @media (max-width: 90em) {
+    font-size: ${(props) => props.theme.fontExtra};
+  }
+
 
   @media (max-width: 70em) {
     font-size: ${(props) => props.theme.fontxxl};
@@ -73,49 +79,15 @@ const Marquee = () => {
           <span
             data-scroll
             data-scroll-direction="horizontal"
-            data-scroll-speed="8"
+            data-scroll-speed="-8"
             data-scroll-target="#direction"
           >
-            Web developer
+            Fin del Mundo
           </span>
         </Banner>
         <Banner
           data-scroll
-          data-scroll-speed="-2"
-          data-scroll-target="#direction"
-        >
-          <span
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="-6"
-            data-scroll-target="#direction"
-          >
-            User interface
-          </span>
-        </Banner>
-        <Banner>
-          <span
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="6"
-            data-scroll-target="#direction"
-          >
-            Front end developer
-          </span>
-        </Banner>
-        <Banner>
-          <span
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="-4"
-            data-scroll-target="#direction"
-          >
-            User experience
-          </span>
-        </Banner>
-        <Banner
-          data-scroll
-          data-scroll-speed="6"
+          data-scroll-speed="5"
           data-scroll-target="#direction"
         >
           <span
@@ -124,9 +96,10 @@ const Marquee = () => {
             data-scroll-speed="6"
             data-scroll-target="#direction"
           >
-            Software engineer
+            Principio de Todo
           </span>
         </Banner>
+       
       </Container>
     </Section>
   );
