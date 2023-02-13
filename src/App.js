@@ -16,6 +16,7 @@ import Shop from "./sections/Shop";
 import GlobalStyles from "./styles/GlobalStyles";
 import { dark } from "./styles/Themes";
 import Project from "./sections/Project";
+import Activity from "./sections/Activity";
 
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
               <Home key="home" />
               <About key="about" />
               <Marquee key="marquee" />
+              {/* <Activity key="Shop" /> */}
               <Project key="Shop" />
               {/* <Shop key="Shop" />*/}
               {/*<NewArrival key="new arrival" />*/}

@@ -85,9 +85,12 @@ const Right = styled.div`
   }
 
   @media (max-width: 90em) {
+
     .small-img-1 {
-      bottom: 12%;
+      display:none;
     }
+    .small-img-2 {
+      display:none;
   }
 
   @media (max-width: 64em) {
@@ -102,18 +105,11 @@ const Right = styled.div`
     }
 
     .small-img-1 {
-      width: 30%;
-      height: auto;
-      left: 10%;
-      bottom: 10%;
+      display:none;
     }
     .small-img-2 {
-      width: 25%;
-      height: auto;
-      position: absolute;
-      left: 70%;
-      bottom: 20%;
-    }
+      display:none;
+  }
   }
 `;
 
@@ -140,6 +136,8 @@ const Title = styled.h1`
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxxxl};
     margin-top: 2rem;
+    color: #fff;
+    left: 10%;
   }
 `;
 

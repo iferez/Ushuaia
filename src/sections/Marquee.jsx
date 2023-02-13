@@ -35,7 +35,6 @@ const Banner = styled.h1`
   font-size: ${(props) => props.theme.fontBig};
   font-family: "Kaushan Script";
   color: ${(props) => props.theme.text};
-  /* position: absolute; */
   white-space: nowrap;
   text-transform: uppercase;
   line-height: 1;
@@ -63,10 +62,12 @@ const Banner = styled.h1`
     font-size: ${(props) => props.theme.fontxl};
     margin: 0.5rem 0;
   }
+  
   @media (max-width: 30em) {
     font-size: 1.8em;
     span {
       padding: 1rem 3rem;
+      margin: 3rem;
     }
   }
 `;

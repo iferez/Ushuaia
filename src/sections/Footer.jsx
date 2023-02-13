@@ -143,8 +143,8 @@ const Footer = () => {
             </a>
           </li>
           <li aria-hidden="true">
-            <a href={pdf} target="_blank">
-              Mi CV
+            <a onClick={() => handleScroll("#home")}>
+             Inicio
             </a>
           </li>
         </ul>

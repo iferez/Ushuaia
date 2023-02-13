@@ -1,200 +1,255 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import React, { useLayoutEffect, useRef } from "react";
-
-import p1 from "../assets/Images/p1.png";
-import p2 from "../assets/Images/p2.png";
-import p3 from "../assets/Images/p3.png";
-import p4 from "../assets/Images/p4.png";
-import p5 from "../assets/Images/p5.png";
-import p6 from "../assets/Images/p6.png";
+import React from "react";
 import styled from "styled-components";
 
-const dataProjects = [
-  {
-    id: 1,
-    name: "PORTFOLIO",
-    description:
-      "Web con información personal, sobre mis estudios y experiencia",
-    link: "https://iferez.github.io/",
-    image: p1,
-  },
-  {
-    id: 2,
-    name: "AUTOGESTION",
-    description:
-      "Portal de autogestión, para realizar diferentes tipos de reclamos a entidades",
-    link: "https://iferezautogestion.netlify.app/",
-    image: p2,
-  },
-  {
-    id: 3,
-    name: "VECINO COSTERO",
-    description:
-      "Web del Municipio de la costa, donde se añadió una funcionalidad completamente nueva para un trabajo final sobre interfaces",
-    link: "https://lacostainterfaces.netlify.app/home.html",
-    image: p3,
-  },
-  {
-    id: 4,
-    name: "CODESARROLLO",
-    description:
-      "Proyecto dirigido a Startups y Empresas, orientado al sector productivo de la economía del conocimiento",
-    link: "https://codesarrolloiferez.netlify.app/",
-    image: p4,
-  },
-  {
-    id: 5,
-    name: "SISCO",
-    description: "Sistema integrado de negociación, gestión de declaraciones juradas",
-    link: "https://siscoiferez.netlify.app/",
-    image: p5,
-  },
-  {
-    id: 6,
-    name: "FATURI",
-    description: "Formulario de aceptación de las condiciones de uso de los recursos informáticos",
-    link: "https://faturi.netlify.app/",
-    image: p6,
-  },
-];
+import a1 from "../assets/Images/a1.jpg";
+import a2 from "../assets/Images/a2.jpg";
+import a3 from "../assets/Images/a3.jpg";
+import a4 from "../assets/Images/a4.jpg";
+import a5 from "../assets/Images/a5.jpg";
+import a6 from "../assets/Images/apinguino.png";
+import a7 from "../assets/Images/a7.jpg";
 
-const Section = styled(motion.section)`
-  min-height: 100vh;
-  height: auto;
-  width: 100%;
+const Section = styled.section`
+  min-height: 200vh;
   margin: 0 auto;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  background-color: ${(props) => props.theme.body};
   position: relative;
+
+  display: flex;
+  @media (max-width: 48em) {
+    width: 90vw;
+  }
+
+  @media (max-width: 30em) {
+    width: 100vw;
+    min-height: 100vh;
+  }
+
+`;
+
+const Center = styled.div`
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  
+
+  img {
+    width: 50%;
+    height: auto;
+    -webkit-box-shadow: 0px 6px 28px -4px rgba(71, 71, 71, 0.7);
+    -moz-box-shadow: 0px 6px 28px -4px rgba(71, 71, 71, 0.7);
+    box-shadow: 0px 6px 28px -4px rgba(71, 71, 71, 0.7);
+  }
+
+  .big-img-1 {
+    width: 60%;
+    position: absolute;
+    left: 0;
+    top: 10%;
+  }
+
+  .small-img-1 {
+    width: 40%;
+    position: absolute;
+    left: 60%;
+    top: 15%;
+  }
+
+  .small-img-2 {
+    width: 50%;
+    position: absolute;
+    left: 60%;
+    top: 35%;
+  }
+
+  .small-img-3 {
+    width: 40%;
+    position: absolute;
+    left: 70%;
+    top: 59%;
+  }
+
+  .small-img-4 {
+    width: 50%;
+    position: absolute;
+    left: 70%;
+    bottom: 1%;
+  }
+
+  .small-img-5 {
+    width: 40%;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+  }
+
+  .small-img-6 {
+    width: 25%;
+    position: absolute;
+    left: 45%;
+    bottom: 15%;
+    z-index: 15;
+  }
+
+  @media (max-width: 30em) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .small-img-1 {
+      width: 60%;
+      position: absolute;
+      left: 40%;
+      top: 15%;
+    }
+  
+    .small-img-2 {
+      width: 50%;
+      position: absolute;
+      left: 60%;
+      top: 35%;
+    }
+  
+    .small-img-3 {
+      width: 60%;
+      position: absolute;
+      left: 50%;
+      top: 59%;
+    }
+  
+    .small-img-4 {
+      width: 50%;
+      position: absolute;
+      left: 70%;
+      bottom: 1%;
+    }
+  
+    .small-img-5 {
+      width: 50%;
+      position: absolute;
+      left: 0%;
+      bottom: 5%;
+    }
+  
+    .small-img-6 {
+      width: 40%;
+      position: absolute;
+      left: 30%;
+      bottom: 15%;
+      z-index: 15;
+    }
+  }
 `;
 
 const Title = styled.h1`
-  font-size: ${(props) => props.theme.fontxxxl};
+  font-size: ${(props) => props.theme.fontBig};
   font-family: "Kaushan Script";
   font-weight: 300;
-  color: ${(props) => props.theme.text};
-  text-shadow: 1px 1px 1px ${(props) => props.theme.body};
+  color: #fff;
 
   position: absolute;
-  top: 0;
-  z-index: 11;
+  top: 1rem;
+
+  z-index: 5;
+
+  span {
+    display: inline-block;
+  }
 
   @media (max-width: 64em) {
-    font-size: ${(props) => props.theme.fontxxl};
+    font-size: ${(props) => `calc(${props.theme.fontBig} - 5vw)`};
+    top: 0;
+    left: 0%;
   }
+
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontxl};
+    margin-top: 2rem;
   }
+
 `;
 
-
-const Right = styled.div`
-  position: absolute;
-  background-color: ${(props) => props.theme.body};
-  min-height: 100vh;
-  width: 100%;
-  padding-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-
-  article{
-    width: 60%;
-
-    div{
-        background-color: #ffff;
-        text-align: center;
-
-        h5{
-            font-size: 2rem;
-            font-weight: bold;
-            margin: 1.2rem 0
-          }
-    }
-  }
-
-  @media (max-width: 48em) {
-    align-items: center;
-
-    article{
-      width: 80%;
-  
-      div{
-          h5{
-              font-size: 1.2rem;
-            }
-            p{
-              font-size: 0.8rem;
-            }
-      }
-    }
-  }
-`;
-
-
-function Project() {
-  const ref = useRef(null);
-  const [data, setData] = useState(dataProjects);
-
+const About = () => {
   return (
-    <Section ref={ref} id="shop">
-      <Title data-scroll data-scroll-speed="-2">
-        PROYECTOS
+    <Section id="fixed-target" className="about">
+      <Title
+        data-scroll
+        data-scroll-speed="-4"
+        data-scroll-direction="horizontal"
+      >
+        Tierra con historia
       </Title>
-      <Right data-scroll>
-        <article
-          id="carousel"
-          className="carousel carousel-dark slide carousel-fade"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-inner shadow-lg">
-            {data.map((el) => (
-              <div
-                key={el.id}
-                className={`carousel-item ${el.id === 1 ? "active" : ""}`}
-              >
-                <a href={el.link} target="_blank">
-                  <img src={el.image} className="d-block w-100" alt={el.name} />
-                </a>
-                <div className="info-project">
-                  <h5>{el.name}</h5>
-                  <p>{el.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-          </button>
-        </article>
-      </Right>
+      <Center>
+        <img
+          className="big-img-1"
+          src={a7}
+          alt=""
+          data-scroll
+          data-scroll-speed="3"
+        />
+
+        <img
+          className="small-img-1"
+          src={a1}
+          alt=""
+          data-scroll
+          data-scroll-speed="-2"
+          data-scroll-direction="horizontal"
+        />
+
+        <img
+          className="small-img-2"
+          src={a4}
+          alt=""
+          data-scroll
+          data-scroll-speed="2"
+          data-scroll-direction="horizontal"
+        />
+
+        <img
+          className="small-img-3"
+          src={a2}
+          alt=""
+          data-scroll
+          data-scroll-speed="-3"
+          data-scroll-direction="horizontal"
+        />
+
+        <img
+          className="small-img-6"
+          src={a6}
+          alt=""
+          data-scroll
+          data-scroll-speed="-2"
+          data-scroll-direction="vertical"
+        />
+
+        <img
+          className="small-img-4"
+          src={a3}
+          alt=""
+          data-scroll
+          data-scroll-speed="5"
+          data-scroll-direction="horizontal"
+        />
+
+        <img
+          className="small-img-5"
+          src={a5}
+          alt=""
+          data-scroll
+          data-scroll-speed="4"
+          data-scroll-direction="horizontal"
+        />
+      </Center>
     </Section>
   );
-}
+};
 
-export default Project;
+export default About;
