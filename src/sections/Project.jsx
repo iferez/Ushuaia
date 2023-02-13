@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
 import a1 from "../assets/Images/a1.jpg";
@@ -176,8 +176,10 @@ const Title = styled.h1`
 `;
 
 const About = () => {
+  const ref = useRef(null);
+
   return (
-    <Section id="fixed-target" className="about">
+    <Section ref={ref} id="shop">
       <Title
         data-scroll
         data-scroll-speed="-4"
@@ -226,7 +228,7 @@ const About = () => {
           src={a6}
           alt=""
           data-scroll
-          data-scroll-speed="-2"
+          data-scroll-speed="-3"
           data-scroll-direction="vertical"
         />
 
@@ -235,7 +237,7 @@ const About = () => {
           src={a3}
           alt=""
           data-scroll
-          data-scroll-speed="5"
+          data-scroll-speed="3"
           data-scroll-direction="horizontal"
         />
 

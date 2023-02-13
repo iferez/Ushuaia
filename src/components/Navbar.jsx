@@ -137,14 +137,22 @@ const Navbar = () => {
           whileTap={{ scale: 0.9, y: 0 }}
           onClick={() => handleScroll('.about')}
         >
-          <Link to="/">Sobre mí</Link>
+          <Link to="/">CIUDAD</Link>
         </Item>
         <Item
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.9, y: 0 }}
           onClick={() => handleScroll('#shop')}
         >
-          <Link to="/">Proyectos</Link>
+          <Link to="/">Fotografias</Link>
+        </Item>
+
+        <Item
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.9, y: 0 }}
+          onClick={() => handleScroll('#shop')}
+        >
+          <a target="_blank" href='https://iferez.github.io/'>iferez</a>
         </Item>
       </MenuItems>
     </NavContainer>
