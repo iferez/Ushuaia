@@ -72,7 +72,7 @@ const Center = styled.div`
   .small-img-4 {
     width: 50%;
     position: absolute;
-    left: 70%;
+    left: 60%;
     bottom: 1%;
   }
 
@@ -141,7 +141,7 @@ const Center = styled.div`
       width: 40%;
       position: absolute;
       left: 30%;
-      bottom: 15%;
+      bottom: 10%;
       z-index: 15;
     }
   }
@@ -228,7 +228,7 @@ const About = () => {
           src={a6}
           alt=""
           data-scroll
-          data-scroll-speed="-3"
+          data-scroll-speed="4"
           data-scroll-direction="vertical"
         />
 
