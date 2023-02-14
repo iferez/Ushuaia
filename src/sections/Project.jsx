@@ -102,47 +102,44 @@ const Center = styled.div`
       height: auto;
     }
 
+    .big-img-1 {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
     .small-img-1 {
-      width: 60%;
+      width: 65%;
       position: absolute;
       left: 40%;
-      top: 15%;
+      top: 48%;
     }
   
     .small-img-2 {
-      width: 50%;
+      width: 80%;
       position: absolute;
-      left: 60%;
-      top: 35%;
+      left: 5%;
+      top: 70%;
     }
   
     .small-img-3 {
-      width: 60%;
+      width: 42%;
       position: absolute;
-      left: 50%;
-      top: 59%;
+      left: 25%;
+      top: 85%;
     }
   
     .small-img-4 {
-      width: 50%;
-      position: absolute;
-      left: 70%;
-      bottom: 1%;
+      display: none;
     }
   
     .small-img-5 {
-      width: 50%;
-      position: absolute;
-      left: 0%;
-      bottom: 5%;
+      display: none;
     }
   
     .small-img-6 {
-      width: 40%;
-      position: absolute;
-      left: 30%;
-      bottom: 10%;
-      z-index: 15;
+      display: none;
     }
   }
 `;
@@ -168,7 +165,7 @@ const Title = styled.h1`
     left: 0%;
   }
 
-  @media (max-width: 48em) {
+  @media (max-width: 30em) {
     font-size: ${(props) => props.theme.fontxl};
     margin-top: 2rem;
   }

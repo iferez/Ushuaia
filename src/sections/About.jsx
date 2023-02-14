@@ -84,16 +84,8 @@ const Right = styled.div`
     top: 30%;
   }
 
-  @media (max-width: 90em) {
 
-    .small-img-1 {
-      display:none;
-    }
-    .small-img-2 {
-      display:none;
-  }
-
-  @media (max-width: 64em) {
+  @media (max-width: 30em) {
     width: 100%;
     display: flex;
     justify-content: center;
