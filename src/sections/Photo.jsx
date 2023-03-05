@@ -1,93 +1,28 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
-import u3 from "../assets/Images/u3.jpg";
-import a7 from "../assets/Images/a7.jpg";
 
 const Section = styled.section`
   height: 100vh;
   margin: 0 auto;
   background-color: ${(props) => props.theme.body};
-  position: relative;
-
   display: flex;
-  @media (max-width: 48em) {
-    width: 90vw;
-  }
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   @media (max-width: 30em) {
-    width: 100vw;
-    height: 100vh;
-  }
-`;
-
-const Center = styled.div`
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-
-  img {
-    width: 50%;
-    height: auto;
-  }
-
-  .big-img-1 {
-    width: 50%;
-    position: absolute;
-    left: 0;
-    top: 10%;
-    z-index: 2;
-  }
-
-  .big-img-2 {
-    width: 35%;
-    position: absolute;
-    right: 0;
-    top: 30%;
-    z-index: 1;
-  }
-
-  @media (max-width: 30em) {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-
-    .big-img-1 {
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: 50%;
-    }
-
-    .big-img-2 {
-      width: 100%;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 1;
-    }
   }
 `;
 
 const Title = styled.h1`
+  width: 100%;
   font-size: ${(props) => props.theme.fontBig};
   font-family: "Kaushan Script";
   font-weight: 300;
+  text-align: center;
   color: #fff;
-
-  position: absolute;
-  top: 1rem;
-
+  margin-top: 1rem;
   z-index: 5;
-
-  span {
-    display: inline-block;
-  }
 
   @media (max-width: 64em) {
     font-size: ${(props) => `calc(${props.theme.fontBig} - 5vw)`};
@@ -101,6 +36,56 @@ const Title = styled.h1`
   }
 `;
 
+const Article = styled.article`
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 30em) {
+    display: block;
+  }
+`;
+
+const Card = styled.div`
+  width: 30vw;
+  height: 25vh;
+  font-size: ${(props) => props.theme.fontxl};
+  font-family: "Kaushan Script";
+  font-weight: 300;
+  text-align: center;
+  color: #ffff;
+  border: 2px solid #ffffff20;
+  margin: 2rem;
+  z-index: 4;
+  padding: 2rem;
+  transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: #ffff;
+    color: ${(props) => props.theme.body};
+    transition: 0.5s ease;
+  }
+
+  @media (max-width: 30em) {
+    font-size: ${(props) => props.theme.fontmd};
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    padding: 1rem;
+
+    &:first-child {
+      margin-top: 4rem;
+    }
+  }
+`;
+
 const Photo = () => {
   const ref = useRef(null);
 
@@ -108,29 +93,43 @@ const Photo = () => {
     <Section ref={ref} id="shop">
       <Title
         data-scroll
-        data-scroll-speed="-4"
-        data-scroll-direction="horizontal"
+        data-scroll-speed="-1"
+        data-scroll-direction="vertical"
       >
         Tierra con historia
       </Title>
-      <Center>
-        <img
-          className="big-img-1"
-          src={a7}
-          alt=""
+      <Article>
+        <Card
           data-scroll
-          data-scroll-speed="3"
-        />
-
-        <img
-          className="big-img-2"
-          src={u3}
-          alt=""
+          data-scroll-speed="-1"
+          data-scroll-direction="vertical"
+        >
+          Parque Nacional <br /> Tierra del Fuego
+        </Card>
+        <Card
           data-scroll
-          data-scroll-speed="2"
-          data-scroll-direction="horizontal"
-        />
-      </Center>
+          data-scroll-speed="-1"
+          data-scroll-direction="vertical"
+        >
+          Ciurcuito <br /> de los Valles
+        </Card>
+      </Article>
+      <Article>
+        <Card
+          data-scroll
+          data-scroll-speed="-1"
+          data-scroll-direction="vertical"
+        >
+          Canal <br /> Beagle
+        </Card>
+        <Card
+          data-scroll
+          data-scroll-speed="-1"
+          data-scroll-direction="vertical"
+        >
+          Espacio Pensar <br /> Malvinas
+        </Card>
+      </Article>
     </Section>
   );
 };

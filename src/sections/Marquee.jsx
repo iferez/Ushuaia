@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Section = styled.section`
-    height: 100vh;
+  height: 100vh;
   width: 80vw;
   margin: 0 auto;
 
@@ -10,16 +10,16 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
 
-  /* background-color: blue; */
   position: relative;
 
-  @media (max-width: 48em) {
+  @media (max-width: 30em) {
     width: 90vw;
+    height: 50vh;
   }
 `;
 
 const Container = styled.div`
-    height: 100vh;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -50,7 +50,6 @@ const Banner = styled.h1`
     font-size: ${(props) => props.theme.fontExtra};
   }
 
-
   @media (max-width: 70em) {
     font-size: ${(props) => props.theme.fontxxl};
   }
@@ -62,7 +61,7 @@ const Banner = styled.h1`
     font-size: ${(props) => props.theme.fontxl};
     margin: 0.5rem 0;
   }
-  
+
   @media (max-width: 30em) {
     font-size: 1.8em;
     span {
@@ -100,7 +99,6 @@ const Marquee = () => {
             Principio de Todo
           </span>
         </Banner>
-       
       </Container>
     </Section>
   );

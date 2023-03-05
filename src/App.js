@@ -50,7 +50,7 @@ function App() {
               <Home key="home" />
               <About key="about" />
               <Marquee key="marquee" />
-              <Photo key="Photo" />
+              <Photo key="shop" />
               <Footer key="Footer" />
             </AnimatePresence>
           </main>
