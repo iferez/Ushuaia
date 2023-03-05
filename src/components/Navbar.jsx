@@ -142,7 +142,7 @@ const Navbar = () => {
         <Item
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.9, y: 0 }}
-          onClick={() => handleScroll('#shop')}
+          onClick={() => handleScroll('#Photo')}
         >
           <Link to="/">Fotografias</Link>
         </Item>

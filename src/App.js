@@ -1,5 +1,4 @@
 import "locomotive-scroll/dist/locomotive-scroll.css";
-
 import { AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
@@ -11,16 +10,11 @@ import About from "./sections/About";
 import Footer from "./sections/Footer";
 import Home from "./sections/Home";
 import Marquee from "./sections/Marquee";
-import NewArrival from "./sections/NewArrival";
-import Shop from "./sections/Shop";
 import GlobalStyles from "./styles/GlobalStyles";
 import { dark } from "./styles/Themes";
-import Project from "./sections/Project";
-import Activity from "./sections/Activity";
-
+import Photo from "./sections/Photo";
 
 function App() {
-  // useLocoScroll();
   const containerRef = useRef(null);
   const [Loaded, setLoaded] = useState(false);
 
@@ -37,7 +31,6 @@ function App() {
         <LocomotiveScrollProvider
           options={{
             smooth: true,
-            // ... all available Locomotive Scroll instance options
             smartphone: {
               smooth: true,
             },
@@ -45,13 +38,7 @@ function App() {
               smooth: true,
             },
           }}
-          watch={
-            [
-              //..all the dependencies you want to watch to update the scroll.
-              //  Basicaly, you would want to watch page/location changes
-              //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
-            ]
-          }
+          watch={[]}
           containerRef={containerRef}
         >
           <AnimatePresence>{Loaded ? null : <Loader />}</AnimatePresence>
@@ -63,10 +50,7 @@ function App() {
               <Home key="home" />
               <About key="about" />
               <Marquee key="marquee" />
-              {/* <Activity key="Shop" /> */}
-              <Project key="Shop" />
-              {/* <Shop key="Shop" />*/}
-              {/*<NewArrival key="new arrival" />*/}
+              <Photo key="Photo" />
               <Footer key="Footer" />
             </AnimatePresence>
           </main>

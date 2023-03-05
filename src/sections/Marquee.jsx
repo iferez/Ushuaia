@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Section = styled.section`
-  min-height: 100vh;
+    height: 100vh;
   width: 80vw;
   margin: 0 auto;
 
@@ -19,7 +19,7 @@ const Section = styled.section`
 `;
 
 const Container = styled.div`
-  min-height: 100vh;
+    height: 100vh;
 
   display: flex;
   flex-direction: column;

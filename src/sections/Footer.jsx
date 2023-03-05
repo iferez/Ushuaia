@@ -7,9 +7,9 @@ import Logo from "../assets/Images/ivanferezlg.jpg";
 import pdf from "../assets/ferezivan.pdf";
 
 const Section = styled.section`
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
-  /* margin: 5rem auto; */
+  z-index: 5;
 
   display: flex;
   flex-direction: column;
@@ -42,7 +42,6 @@ const LogoContainer = styled.div`
     @media (max-width: 48em) {
       font-size: ${(props) => props.theme.fontxl};
     }
-
   }
 `;
 
@@ -81,7 +80,7 @@ const FooterComponent = styled(motion.footer)`
       color: #76e2eb;
     }
 
-    a:hover{
+    a:hover {
       transform: scale(1.1);
       transition: 0.3s ease;
       color: #76e2eb;
@@ -93,7 +92,6 @@ const FooterComponent = styled(motion.footer)`
     }
   }
 `;
-
 
 const Footer = () => {
   const { scroll } = useLocomotiveScroll();
@@ -143,9 +141,7 @@ const Footer = () => {
             </a>
           </li>
           <li aria-hidden="true">
-            <a onClick={() => handleScroll("#home")}>
-             Inicio
-            </a>
+            <a onClick={() => handleScroll("#home")}>Inicio</a>
           </li>
         </ul>
       </FooterComponent>

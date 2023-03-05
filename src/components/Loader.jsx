@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import styled from 'styled-components';
+import { motion } from "framer-motion";
+import React from "react";
+import styled from "styled-components";
 import Logoload from "../assets/Svgs/ball-triangle.svg";
 
 const Container = styled(motion.div)`
@@ -9,8 +9,8 @@ const Container = styled(motion.div)`
   left: 0;
   right: 0;
   bottom: 0;
-touch-action: none;
-overflow: hidden;
+  touch-action: none;
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
 
@@ -26,7 +26,7 @@ overflow: hidden;
   width: 100%;
 
   @media (max-width: 48em) {
-    svg{
+    svg {
       width: 20vw;
     }
   }
@@ -57,7 +57,7 @@ const pathVariants = {
 
     transition: {
       duration: 2,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };
@@ -72,7 +72,7 @@ const textVariants = {
       duration: 1,
       yoyo: Infinity,
 
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };
@@ -84,7 +84,6 @@ const Text = styled(motion.span)`
 
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontlg};
-
   }
 `;
 
@@ -92,12 +91,16 @@ const Loader = () => {
   return (
     <Container
       initial={{ y: 0, opacity: 1 }}
-      exit={{ y: '100%', opacity: 0 }}
+      exit={{ y: "100%", opacity: 0 }}
       transition={{ duration: 2 }}
     >
-      <img src={Logoload} alt="Loader"             variants={pathVariants}
-            initial="hidden"
-            animate="visible"/>
+      <img
+        src={Logoload}
+        alt="Loader"
+        variants={pathVariants}
+        initial="hidden"
+        animate="visible"
+      />
       <Text variants={textVariants} initial="hidden" animate="visible">
         Loading
       </Text>

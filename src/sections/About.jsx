@@ -7,10 +7,9 @@ import tren from "../assets/Images/tren.jpg";
 
 
 const Section = styled.section`
-  min-height: 100vh;
+  height: 100vh;
   width: 80vw;
   margin: 0 auto;
-
   position: relative;
 
   display: flex;
@@ -26,6 +25,7 @@ const Section = styled.section`
 `;
 
 const Left = styled.div`
+height: 80%;
   width: 50%;
   font-size: ${(props) => props.theme.fontlg};
   font-weight: 300;
@@ -36,7 +36,6 @@ const Left = styled.div`
 
   @media (max-width: 64em) {
     width: 80%;
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -56,6 +55,7 @@ const Left = styled.div`
   }
   @media (max-width: 30em) {
     font-size: ${(props) => props.theme.fontsm};
+    height: auto;
     padding: 2rem;
     width: 90%;
   }
@@ -75,7 +75,7 @@ const Right = styled.div`
     width: 80%;
     position: absolute;
     right: 92%;
-    bottom: 20%;
+    bottom: 5%;
   }
   .small-img-2 {
     width: 50%;
